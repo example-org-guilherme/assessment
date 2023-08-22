@@ -22,6 +22,10 @@ This project is composed the following way:
 ## Setting up 
 
 ```bash
+# Clone this project
+git clone git@github.com:elevate-labs-with-guilherme/assessment.git
+cd assessment
+
 export TF_VAR_owner="<YOUR_TEST_ORG_HERE>"
 export TF_VAR_token="<YOUR_TEST_ORG_PAT_HERE>" # with **read-write** in the following areas: Actions, Workflows, Administration, Contents, Pull Requests, Secrets, Workflows
 
