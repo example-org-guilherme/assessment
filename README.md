@@ -32,6 +32,8 @@ export TF_VAR_token="<YOUR_TEST_ORG_PAT_HERE>" # with **read-write** in the foll
 make up # this will build the container & run terraform from it
 ```
 
+After this is up, you have to [enable `Pull Request` creation from actions within the org](pull-request-config.png).
+
 With this you should be ready to hop on to the `application` repository's actions and manually trigger the `Release` and `Update Submodules` actions.
 
 ## Testing
