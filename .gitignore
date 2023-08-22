@@ -1,0 +1,4 @@
+tfstate
+repos/application/submodule-*
+repos/**/.git
+.env

@@ -1,0 +1,1 @@
+Example application with submodules and Github Actions workflows for automatic scheduled releases and automatic submodule updates :)

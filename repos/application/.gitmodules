@@ -1,0 +1,9 @@
+[submodule "submodule-c"]
+	path = submodule-c
+	url = https://github.com/elevate-labs-with-guilherme/submodule-c.git
+[submodule "submodule-a"]
+	path = submodule-a
+	url = https://github.com/elevate-labs-with-guilherme/submodule-a.git
+[submodule "submodule-b"]
+	path = submodule-b
+	url = https://github.com/elevate-labs-with-guilherme/submodule-b.git

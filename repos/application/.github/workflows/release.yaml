@@ -1,0 +1,21 @@
+name: Release
+
+on:
+  schedule: 
+     # UTC -- At minute 16 past hour 9 AM and 3 PM on Monday. (PST)
+    # We do this many times and not just once because github's scheduler is unreliable: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+    - cron: 16,32,48 16,22 * * 1  
+    # Every hour, for testing!
+  workflow_dispatch: # This enables the user to trigger this workflow manually through the interface :)
+
+jobs:
+  release:
+    permissions:
+      contents: write
+    uses: elevate-labs-with-guilherme/gha-workflows/.github/workflows/release.yaml@main
+    with:
+      # Depending on trigger type, we enable or not the filters :)
+      schedule_filter_type: ${{ github.event.schedule && 'EVERY_3_WEEKS' || 'NONE' }}
+      recency_filter_type: ${{ github.event.schedule  && 'WEEK' || 'NONE' }}
+    secrets:
+      GH_TOKEN_READ_ALL_REPOS: ${{ secrets.GH_TOKEN }}

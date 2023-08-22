@@ -1,0 +1,19 @@
+name: Update Submodules
+
+on:
+  schedule: 
+     # UTC -- At different times past hour 7 AM every day. (PST)
+    # We do this many times and not just once because github's scheduler is unreliable: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+    - cron: 12,19,23,48,53 14 * * *
+  workflow_dispatch: # This enables the user to trigger this workflow manually through the interface :)
+
+jobs:
+  update_submodules:
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: elevate-labs-with-guilherme/gha-workflows/.github/workflows/update-submodules.yaml@main
+    secrets:
+      GH_TOKEN_READ_ALL_REPOS: ${{ secrets.GH_TOKEN }}
+    with:
+      reviewers: pimguilherme
