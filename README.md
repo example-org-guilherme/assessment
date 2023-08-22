@@ -13,6 +13,10 @@ This project is composed the following way:
 
 - **Dockerfile** used to package everything in an easy-to-use container that terraforms the repositories
 
+## Demo
+
+This is a demonstration of it working end to end: https://youtu.be/YLyOy1eCN6g
+
 ## Requirements
 
 - Requires a test Github organization
